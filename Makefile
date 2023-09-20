@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=main --cov=mylib test_*.py
+	python -m pytest -vv --cov=main --cov=mylib tests/*.py
 
 format:	
 	black *.py 
@@ -21,10 +21,12 @@ refactor: format lint
 
 #replace xxx with the .py (without the .py) file that you want to run
 deploy:
-	python -m main 2 3
+	python -m describe_stats &&\
+		jupyter notebook describe_stats.ipynb
 
 #if u want a different run file that's different from deploy
 run:
-	python -m main 2 3
+	python -m describe_stats &&\
+		jupyter notebook describe_stats.ipynb
 		
 all: install lint test format deploy
