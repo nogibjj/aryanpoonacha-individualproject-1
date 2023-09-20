@@ -3,7 +3,8 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=main --cov=mylib tests/*.py
+	python -m pytest -vv --cov=describe_stats test_*.py &&\
+	pytest --nbval-lax describe_stats.ipynb
 
 format:	
 	black *.py 

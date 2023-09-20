@@ -1,10 +1,7 @@
 import unittest
 from unittest.mock import patch
 
-# Add the parent directory to the sys.path to access describe_stats_script
-sys.path.append("..")
-
-from describe_stats_script import full_describe
+from describe_stats import full_describe
 
 class TestDescribeStatsScript(unittest.TestCase):
 
