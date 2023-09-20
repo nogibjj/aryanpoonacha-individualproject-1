@@ -1,9 +1,4 @@
 import unittest
-import sys
-import os
-
-# Append the parent directory to the sys.path to access lib.py
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 # Import the module you want to test
 import lib
