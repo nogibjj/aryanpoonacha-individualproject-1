@@ -21,13 +21,15 @@ container-lint:
 refactor: format lint
 
 #replace xxx with the .py (without the .py) file that you want to run
+#		jupyter notebook describe_stats.ipynb
 deploy:
-	python -m describe_stats &&\
-		jupyter notebook describe_stats.ipynb
+	python -m describe_stats 
+
 
 #if u want a different run file that's different from deploy
-run:
-	python -m describe_stats &&\
+#&&\
 		jupyter notebook describe_stats.ipynb
+run:
+	python -m describe_stats 
 		
 all: install lint test format deploy
