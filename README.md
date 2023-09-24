@@ -2,6 +2,8 @@
 
 Based on the python ruff template provided. Created for IDS 706, Fall 2023.
 
+Video Showcase of the project: https://youtu.be/WazWHOkKh5g
+
 1. First thing to do on launch is to open a new shell and verify virtualenv is sourced.
 
 Things included are:
